@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Logo from './logo';
 import SearchBar from './searchbar';
-import RecentPost from './recentpost';
+import RecentPosts from './recentposts';
 
 export default class Home extends Component {
   render() {
@@ -10,7 +10,7 @@ export default class Home extends Component {
         <div>
           <Logo />
           <SearchBar/>
-          <RecentPost/>
+          <RecentPosts/>
         </div>
       </div>
     );
