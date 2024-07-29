@@ -1,15 +1,15 @@
-import { SET_RECENT_POSTS } from '../actions/types';
+import { SET_RECENT_POSTS } from './types';
 
 import axios from 'axios';
 
 export function fetchRecentPosts() {
     return function(dispatch) {
-        axios.get('https://api.dailysmarty.com/posts')
+        axios.get('https://swapi.dev/api/people')
         .then(response => {
-            console.log(response.data.posts);
+            console.log(response.data.results);
             dispatch({
-                type: SET_RECENT_POSTS,
-                payload: response.data.posts
+                type: 'SET_RECENT_POSTS',
+                payload: response.data.results
             })
         })
     }
