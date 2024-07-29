@@ -1,4 +1,7 @@
-import { SET_RECENT_POSTS } from './types';
+import { 
+    SET_RECENT_POSTS,
+    SET_RESULTS_POSTS
+ } from './types';
 
 import axios from 'axios';
 
@@ -22,11 +25,10 @@ export function fetchPostsWithQuery(query, callback) {
       //axios.get(`https://api.dailysmarty.com/search?q=${query}`)
         .then(response => {
           console.log(response.data.results);
-          /*dispatch({
+          dispatch({
             type: SET_RESULTS_POSTS,
             payload: response.data.results
           })
-          if(callback) { callback() }*/
         })
     }
   }
