@@ -5,6 +5,7 @@ import axios from 'axios';
 export function fetchRecentPosts() {
     return function(dispatch) {
         axios.get('https://swapi.dev/api/people/')
+        //axios.get('https://api.dailysmarty.com/posts')
         .then(response => {
             console.log(response.data);
             dispatch({
@@ -18,6 +19,7 @@ export function fetchRecentPosts() {
 export function fetchPostsWithQuery(query, callback) {
     return function(dispatch) {
       axios.get(`https://swapi.dev/api/people/?search=${query}`)
+      //axios.get(`https://api.dailysmarty.com/search?q=${query}`)
         .then(response => {
           console.log(response.data.results);
           /*dispatch({
