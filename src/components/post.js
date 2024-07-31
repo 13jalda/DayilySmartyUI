@@ -12,14 +12,16 @@ class Post extends Component {
   
   renderLinks() {
     let links = this.props.post_links.map((post_link, index) => {
-            <div className="post-link" key={index}>
+            return (
+              <div className="post-link" key={index}>
                 <div className="post-link__box">
-                  
+
                 </div>
                 <div className="post-link__link">
                   <a href={post_link.link_url}>Useful Link #{index + 1}</a>
                 </div>
-            </div>
+              </div>
+            )
     })
     return links;
 }

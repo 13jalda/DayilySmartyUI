@@ -10,7 +10,6 @@ export function fetchRecentPosts() {
         axios.get('https://swapi.dev/api/people/')
         //axios.get('https://api.dailysmarty.com/posts')
         .then(response => {
-            console.log(response.data);
             dispatch({
                 type: SET_RECENT_POSTS,
                 payload: response.data.results
@@ -24,11 +23,11 @@ export function fetchPostsWithQuery(query, callback) {
       axios.get(`https://swapi.dev/api/people/?search=${query}`)
       //axios.get(`https://api.dailysmarty.com/search?q=${query}`)
         .then(response => {
-          console.log(response.data.results);
           dispatch({
             type: SET_RESULTS_POSTS,
             payload: response.data.results
           })
+          if(callback) { callback() }
         })
     }
   }
