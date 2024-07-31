@@ -16,7 +16,7 @@ class RecentPosts extends Component {
       
       if(index < 3) {
         return(
-          <Post {...post} key={index} />
+          <Post type="recent" {...post} key={index} />
         )
       } 
     })
