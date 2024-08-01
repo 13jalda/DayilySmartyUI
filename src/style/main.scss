@@ -1,3 +1,4 @@
+
 html {
     font-size: 62.5%; // 1rem is 10px
     font-family: 'Lato', sans-serif;
@@ -35,8 +36,18 @@ body {
     display: grid;
     align-content: space-around;
     justify-items: center;
-    grid-template-rows: 1fr 2fr 1fr;
+   // grid-template-rows: 1fr 2fr 1fr;
 }
+
+.logo-main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+$color-gray-one: #666666;
+$color-gray-two: #b3b3b3;
+@import './searchBar';
 
 .post-topic {
     margin: 0 4px;
